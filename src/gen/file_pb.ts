@@ -11,7 +11,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file file.proto.
  */
 export const file_file: GenFile = /*@__PURE__*/
-  fileDesc("CgpmaWxlLnByb3RvEgVsb2JieSJXCgpQbGF5ZXJJbmZvEhoKCXBsYXllcl9pZBgBIAEoCUIHukgEcgIQARIcCgtwbGF5ZXJfbmFtZRgCIAEoCUIHukgEcgIQARIPCgdpc19ob3N0GAMgASgIInAKEUNyZWF0ZVJvb21SZXF1ZXN0EhwKCXJvb21fbmFtZRgBIAEoCUIJukgGcgQQARgyEh8KDmhvc3RfcGxheWVyX2lkGAIgASgJQge6SARyAhABEhwKC3BsYXllcl9uYW1lGAMgASgJQge6SARyAhABIkcKEkNyZWF0ZVJvb21SZXNwb25zZRIPCgdyb29tX2lkGAEgASgJEg8KB3N1Y2Nlc3MYAiABKAgSDwoHbWVzc2FnZRgDIAEoCSJlCg9Kb2luUm9vbVJlcXVlc3QSGAoHcm9vbV9pZBgBIAEoCUIHukgEcgIQARIaCglwbGF5ZXJfaWQYAiABKAlCB7pIBHICEAESHAoLcGxheWVyX25hbWUYAyABKAlCB7pIBHICEAEiNAoQSm9pblJvb21SZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIEg8KB21lc3NhZ2UYAiABKAkiSAoQTGVhdmVSb29tUmVxdWVzdBIYCgdyb29tX2lkGAEgASgJQge6SARyAhABEhoKCXBsYXllcl9pZBgCIAEoCUIHukgEcgIQASI1ChFMZWF2ZVJvb21SZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIEg8KB21lc3NhZ2UYAiABKAkiLgoSTGlzdE1lbWJlcnNSZXF1ZXN0EhgKB3Jvb21faWQYASABKAlCB7pIBHICEAEiOQoTTGlzdE1lbWJlcnNSZXNwb25zZRIiCgdwbGF5ZXJzGAEgAygLMhEubG9iYnkuUGxheWVySW5mbyJnChVQbGF5ZXJKb2luZWRCcm9hZGNhc3QSGAoHcm9vbV9pZBgBIAEoCUIHukgEcgIQARIhCgZwbGF5ZXIYAiABKAsyES5sb2JieS5QbGF5ZXJJbmZvEhEKCXRpbWVzdGFtcBgDIAEoAyJlChNQbGF5ZXJMZWZ0QnJvYWRjYXN0EhgKB3Jvb21faWQYASABKAlCB7pIBHICEAESIQoGcGxheWVyGAIgASgLMhEubG9iYnkuUGxheWVySW5mbxIRCgl0aW1lc3RhbXAYAyABKAMiLAoQUm9vbUV2ZW50UmVxdWVzdBIYCgdyb29tX2lkGAEgASgJQge6SARyAhABIn4KCVJvb21FdmVudBI1Cg1wbGF5ZXJfam9pbmVkGAEgASgLMhwubG9iYnkuUGxheWVySm9pbmVkQnJvYWRjYXN0SAASMQoLcGxheWVyX2xlZnQYAiABKAsyGi5sb2JieS5QbGF5ZXJMZWZ0QnJvYWRjYXN0SABCBwoFZXZlbnQykwIKC1Jvb21TZXJ2aWNlEkEKCkNyZWF0ZVJvb20SGC5sb2JieS5DcmVhdGVSb29tUmVxdWVzdBoZLmxvYmJ5LkNyZWF0ZVJvb21SZXNwb25zZRI7CghKb2luUm9vbRIWLmxvYmJ5LkpvaW5Sb29tUmVxdWVzdBoXLmxvYmJ5LkpvaW5Sb29tUmVzcG9uc2USPgoJTGVhdmVSb29tEhcubG9iYnkuTGVhdmVSb29tUmVxdWVzdBoYLmxvYmJ5LkxlYXZlUm9vbVJlc3BvbnNlEkQKC0xpc3RNZW1iZXJzEhkubG9iYnkuTGlzdE1lbWJlcnNSZXF1ZXN0GhoubG9iYnkuTGlzdE1lbWJlcnNSZXNwb25zZTJQCg1Sb29tQnJvYWRjYXN0Ej8KEFN0cmVhbVJvb21FdmVudHMSFy5sb2JieS5Sb29tRXZlbnRSZXF1ZXN0GhAubG9iYnkuUm9vbUV2ZW50MAFCGFoWZ28tY29ubmVjdC9nZW47bG9iYnlwYmIGcHJvdG8z", [file_buf_validate_validate]);
+  fileDesc("CgpmaWxlLnByb3RvEgVsb2JieSJXCgpQbGF5ZXJJbmZvEhoKCXBsYXllcl9pZBgBIAEoCUIHukgEcgIQARIcCgtwbGF5ZXJfbmFtZRgCIAEoCUIHukgEcgIQARIPCgdpc19ob3N0GAMgASgIIk0KEUNyZWF0ZVJvb21SZXF1ZXN0EhoKCXBsYXllcl9pZBgBIAEoCUIHukgEcgIQARIcCgtwbGF5ZXJfbmFtZRgCIAEoCUIHukgEcgIQASJHChJDcmVhdGVSb29tUmVzcG9uc2USDwoHcm9vbV9pZBgBIAEoCRIPCgdzdWNjZXNzGAIgASgIEg8KB21lc3NhZ2UYAyABKAkiZQoPSm9pblJvb21SZXF1ZXN0EhgKB3Jvb21faWQYASABKAlCB7pIBHICEAESGgoJcGxheWVyX2lkGAIgASgJQge6SARyAhABEhwKC3BsYXllcl9uYW1lGAMgASgJQge6SARyAhABIjQKEEpvaW5Sb29tUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBIPCgdtZXNzYWdlGAIgASgJIkgKEExlYXZlUm9vbVJlcXVlc3QSGAoHcm9vbV9pZBgBIAEoCUIHukgEcgIQARIaCglwbGF5ZXJfaWQYAiABKAlCB7pIBHICEAEiNQoRTGVhdmVSb29tUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBIPCgdtZXNzYWdlGAIgASgJIi4KEkxpc3RNZW1iZXJzUmVxdWVzdBIYCgdyb29tX2lkGAEgASgJQge6SARyAhABIjkKE0xpc3RNZW1iZXJzUmVzcG9uc2USIgoHcGxheWVycxgBIAMoCzIRLmxvYmJ5LlBsYXllckluZm8iagoYUGxheWVyU2VudE1lc3NhZ2VSZXF1ZXN0EhgKB3Jvb21faWQYASABKAlCB7pIBHICEAESGgoJcGxheWVyX2lkGAIgASgJQge6SARyAhABEhgKB21lc3NhZ2UYAyABKAlCB7pIBHICEAEiPQoZUGxheWVyU2VudE1lc3NhZ2VSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIEg8KB21lc3NhZ2UYAiABKAkiZwoVUGxheWVySm9pbmVkQnJvYWRjYXN0EhgKB3Jvb21faWQYASABKAlCB7pIBHICEAESIQoGcGxheWVyGAIgASgLMhEubG9iYnkuUGxheWVySW5mbxIRCgl0aW1lc3RhbXAYAyABKAMiZQoTUGxheWVyTGVmdEJyb2FkY2FzdBIYCgdyb29tX2lkGAEgASgJQge6SARyAhABEiEKBnBsYXllchgCIAEoCzIRLmxvYmJ5LlBsYXllckluZm8SEQoJdGltZXN0YW1wGAMgASgDInkKFENoYXRNZXNzYWdlQnJvYWRjYXN0EhgKB3Jvb21faWQYASABKAlCB7pIBHICEAESGgoJcGxheWVyX2lkGAIgASgJQge6SARyAhABEhgKB21lc3NhZ2UYAyABKAlCB7pIBHICEAESEQoJdGltZXN0YW1wGAQgASgDIiwKEFJvb21FdmVudFJlcXVlc3QSGAoHcm9vbV9pZBgBIAEoCUIHukgEcgIQASK9AQoJUm9vbUV2ZW50EjUKDXBsYXllcl9qb2luZWQYASABKAsyHC5sb2JieS5QbGF5ZXJKb2luZWRCcm9hZGNhc3RIABIxCgtwbGF5ZXJfbGVmdBgCIAEoCzIaLmxvYmJ5LlBsYXllckxlZnRCcm9hZGNhc3RIABI9ChZjaGF0X21lc3NhZ2VfYnJvYWRjYXN0GAMgASgLMhsubG9iYnkuQ2hhdE1lc3NhZ2VCcm9hZGNhc3RIAEIHCgVldmVudDLlAgoLUm9vbVNlcnZpY2USQQoKQ3JlYXRlUm9vbRIYLmxvYmJ5LkNyZWF0ZVJvb21SZXF1ZXN0GhkubG9iYnkuQ3JlYXRlUm9vbVJlc3BvbnNlEjsKCEpvaW5Sb29tEhYubG9iYnkuSm9pblJvb21SZXF1ZXN0GhcubG9iYnkuSm9pblJvb21SZXNwb25zZRI+CglMZWF2ZVJvb20SFy5sb2JieS5MZWF2ZVJvb21SZXF1ZXN0GhgubG9iYnkuTGVhdmVSb29tUmVzcG9uc2USRAoLTGlzdE1lbWJlcnMSGS5sb2JieS5MaXN0TWVtYmVyc1JlcXVlc3QaGi5sb2JieS5MaXN0TWVtYmVyc1Jlc3BvbnNlElAKC1NlbmRNZXNzYWdlEh8ubG9iYnkuUGxheWVyU2VudE1lc3NhZ2VSZXF1ZXN0GiAubG9iYnkuUGxheWVyU2VudE1lc3NhZ2VSZXNwb25zZTJQCg1Sb29tQnJvYWRjYXN0Ej8KEFN0cmVhbVJvb21FdmVudHMSFy5sb2JieS5Sb29tRXZlbnRSZXF1ZXN0GhAubG9iYnkuUm9vbUV2ZW50MAFCGFoWZ28tY29ubmVjdC9nZW47bG9iYnlwYmIGcHJvdG8z", [file_buf_validate_validate]);
 
 /**
  * Player info
@@ -49,17 +49,12 @@ export const PlayerInfoSchema: GenMessage<PlayerInfo> = /*@__PURE__*/
  */
 export type CreateRoomRequest = Message<"lobby.CreateRoomRequest"> & {
   /**
-   * @generated from field: string room_name = 1;
+   * @generated from field: string player_id = 1;
    */
-  roomName: string;
+  playerId: string;
 
   /**
-   * @generated from field: string host_player_id = 2;
-   */
-  hostPlayerId: string;
-
-  /**
-   * @generated from field: string player_name = 3;
+   * @generated from field: string player_name = 2;
    */
   playerName: string;
 };
@@ -232,6 +227,57 @@ export const ListMembersResponseSchema: GenMessage<ListMembersResponse> = /*@__P
   messageDesc(file_file, 8);
 
 /**
+ * Player sent message
+ *
+ * @generated from message lobby.PlayerSentMessageRequest
+ */
+export type PlayerSentMessageRequest = Message<"lobby.PlayerSentMessageRequest"> & {
+  /**
+   * @generated from field: string room_id = 1;
+   */
+  roomId: string;
+
+  /**
+   * @generated from field: string player_id = 2;
+   */
+  playerId: string;
+
+  /**
+   * @generated from field: string message = 3;
+   */
+  message: string;
+};
+
+/**
+ * Describes the message lobby.PlayerSentMessageRequest.
+ * Use `create(PlayerSentMessageRequestSchema)` to create a new message.
+ */
+export const PlayerSentMessageRequestSchema: GenMessage<PlayerSentMessageRequest> = /*@__PURE__*/
+  messageDesc(file_file, 9);
+
+/**
+ * @generated from message lobby.PlayerSentMessageResponse
+ */
+export type PlayerSentMessageResponse = Message<"lobby.PlayerSentMessageResponse"> & {
+  /**
+   * @generated from field: bool success = 1;
+   */
+  success: boolean;
+
+  /**
+   * @generated from field: string message = 2;
+   */
+  message: string;
+};
+
+/**
+ * Describes the message lobby.PlayerSentMessageResponse.
+ * Use `create(PlayerSentMessageResponseSchema)` to create a new message.
+ */
+export const PlayerSentMessageResponseSchema: GenMessage<PlayerSentMessageResponse> = /*@__PURE__*/
+  messageDesc(file_file, 10);
+
+/**
  * Broadcast events
  *
  * @generated from message lobby.PlayerJoinedBroadcast
@@ -258,7 +304,7 @@ export type PlayerJoinedBroadcast = Message<"lobby.PlayerJoinedBroadcast"> & {
  * Use `create(PlayerJoinedBroadcastSchema)` to create a new message.
  */
 export const PlayerJoinedBroadcastSchema: GenMessage<PlayerJoinedBroadcast> = /*@__PURE__*/
-  messageDesc(file_file, 9);
+  messageDesc(file_file, 11);
 
 /**
  * @generated from message lobby.PlayerLeftBroadcast
@@ -285,7 +331,39 @@ export type PlayerLeftBroadcast = Message<"lobby.PlayerLeftBroadcast"> & {
  * Use `create(PlayerLeftBroadcastSchema)` to create a new message.
  */
 export const PlayerLeftBroadcastSchema: GenMessage<PlayerLeftBroadcast> = /*@__PURE__*/
-  messageDesc(file_file, 10);
+  messageDesc(file_file, 12);
+
+/**
+ * @generated from message lobby.ChatMessageBroadcast
+ */
+export type ChatMessageBroadcast = Message<"lobby.ChatMessageBroadcast"> & {
+  /**
+   * @generated from field: string room_id = 1;
+   */
+  roomId: string;
+
+  /**
+   * @generated from field: string player_id = 2;
+   */
+  playerId: string;
+
+  /**
+   * @generated from field: string message = 3;
+   */
+  message: string;
+
+  /**
+   * @generated from field: int64 timestamp = 4;
+   */
+  timestamp: bigint;
+};
+
+/**
+ * Describes the message lobby.ChatMessageBroadcast.
+ * Use `create(ChatMessageBroadcastSchema)` to create a new message.
+ */
+export const ChatMessageBroadcastSchema: GenMessage<ChatMessageBroadcast> = /*@__PURE__*/
+  messageDesc(file_file, 13);
 
 /**
  * @generated from message lobby.RoomEventRequest
@@ -302,7 +380,7 @@ export type RoomEventRequest = Message<"lobby.RoomEventRequest"> & {
  * Use `create(RoomEventRequestSchema)` to create a new message.
  */
 export const RoomEventRequestSchema: GenMessage<RoomEventRequest> = /*@__PURE__*/
-  messageDesc(file_file, 11);
+  messageDesc(file_file, 14);
 
 /**
  * @generated from message lobby.RoomEvent
@@ -323,6 +401,12 @@ export type RoomEvent = Message<"lobby.RoomEvent"> & {
      */
     value: PlayerLeftBroadcast;
     case: "playerLeft";
+  } | {
+    /**
+     * @generated from field: lobby.ChatMessageBroadcast chat_message_broadcast = 3;
+     */
+    value: ChatMessageBroadcast;
+    case: "chatMessageBroadcast";
   } | { case: undefined; value?: undefined };
 };
 
@@ -331,7 +415,7 @@ export type RoomEvent = Message<"lobby.RoomEvent"> & {
  * Use `create(RoomEventSchema)` to create a new message.
  */
 export const RoomEventSchema: GenMessage<RoomEvent> = /*@__PURE__*/
-  messageDesc(file_file, 12);
+  messageDesc(file_file, 15);
 
 /**
  * Service for room management
@@ -370,6 +454,14 @@ export const RoomService: GenService<{
     methodKind: "unary";
     input: typeof ListMembersRequestSchema;
     output: typeof ListMembersResponseSchema;
+  },
+  /**
+   * @generated from rpc lobby.RoomService.SendMessage
+   */
+  sendMessage: {
+    methodKind: "unary";
+    input: typeof PlayerSentMessageRequestSchema;
+    output: typeof PlayerSentMessageResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_file, 0);

@@ -1,4 +1,8 @@
-import { RoomBroadcast } from "@/gen/file_pb";
+import {
+  RoomBroadcast,
+  type ChatMessageBroadcast,
+  type PlayerInfo,
+} from "@/gen/file_pb";
 import { createConnectTransport } from "@connectrpc/connect-web";
 import { useQueryClient } from "@tanstack/react-query";
 import { createClient } from "@connectrpc/connect";
@@ -22,10 +26,35 @@ export function useRoomBroadcast(roomId: string | undefined) {
       for await (const event of stream) {
         switch (event.event.case) {
           case "playerJoined":
+            const playerJoined = event.event.value;
+            if (!playerJoined.player) break;
+            queryClient.setQueryData(
+              ["listMembers", { roomId }],
+              (oldData: PlayerInfo[]) => {
+                return [...oldData, playerJoined.player!];
+              }
+            );
+            break;
           case "playerLeft":
-            queryClient.invalidateQueries({
-              queryKey: ["listMembers", { roomId }],
-            });
+            const playerLeft = event.event.value;
+            if (!playerLeft.player) break;
+            queryClient.setQueryData(
+              ["listMembers", { roomId }],
+              (oldData: PlayerInfo[]) => {
+                return oldData.filter(
+                  (player) => player.playerId !== playerLeft.player!.playerId
+                );
+              }
+            );
+            break;
+          case "chatMessageBroadcast":
+            const chatMessage = event.event.value;
+            queryClient.setQueryData(
+              ["chatMessages", { roomId }],
+              (oldData: ChatMessageBroadcast[]) => {
+                return [...oldData, chatMessage];
+              }
+            );
             break;
         }
       }
