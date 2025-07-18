@@ -16,7 +16,7 @@ declare module "@tanstack/react-router" {
 }
 
 const transport = createConnectTransport({
-  baseUrl: "http://localhost:8080",
+  baseUrl: "https://catan.bretteswebservices.fr/",
 });
 
 const queryClient = new QueryClient();

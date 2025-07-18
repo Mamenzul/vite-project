@@ -11,7 +11,7 @@ import { useQuery } from "@connectrpc/connect-query";
 import { listMembers } from "@/gen/file-RoomService_connectquery";
 
 const transport = createConnectTransport({
-  baseUrl: "http://localhost:8080",
+  baseUrl: "https://catan.bretteswebservices.fr/",
 });
 const client = createClient(RoomBroadcast, transport);
 
