@@ -5,6 +5,11 @@
 import { RoomService } from "./file_pb.js";
 
 /**
+ * @generated from rpc lobby.RoomService.Ping
+ */
+export const ping = RoomService.method.ping;
+
+/**
  * @generated from rpc lobby.RoomService.CreateRoom
  */
 export const createRoom = RoomService.method.createRoom;

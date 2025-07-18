@@ -7,10 +7,10 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { leaveRoom } from "@/gen/file-RoomService_connectquery";
-import { useMutation } from "@connectrpc/connect-query";
+import { leaveRoom, ping } from "@/gen/file-RoomService_connectquery";
+import { useMutation, useQuery } from "@connectrpc/connect-query";
 import { useParams } from "@tanstack/react-router";
-import { Users, Copy, Crown, Check } from "lucide-react";
+import { Users, Copy, Crown, Check, Loader2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "@tanstack/react-router";
 import { usePlayerStore } from "@/store";
@@ -25,9 +25,20 @@ export function Room() {
   useEffect(() => {
     playerStore.loadPlayerStore();
   }, [playerStore]);
-  playerStore.loadPlayerStore();
   const [copied, setCopied] = useState(false);
   const { roomId } = useParams({ strict: false });
+  const [clientTimeUnixMillis, setClientTimeUnixMillis] = useState(
+    BigInt(Date.now())
+  );
+
+  // Update it every 5 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setClientTimeUnixMillis(BigInt(Date.now()));
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   if (!roomId || !playerStore.player) {
     navigate({ to: "/" });
@@ -40,7 +51,13 @@ export function Room() {
     },
   });
 
-  const { players } = useRoomBroadcast(roomId);
+  useQuery(ping, {
+    playerId: playerStore.player.playerId,
+    roomId,
+    clientTimeUnixMillis,
+  });
+
+  const { players, pingMap } = useRoomBroadcast(roomId);
 
   const leaveGame = () => {
     leaveRoomMutation.mutate({
@@ -144,24 +161,39 @@ export function Room() {
       </CardHeader>
       <CardContent>
         <div className="grid gap-3">
-          {sortedPlayers.map((player) => (
-            <div
-              key={player.playerId}
-              className="flex items-center gap-3 p-3 rounded-lg bg-muted/50"
-            >
-              <div className="flex-1">
-                <div className="flex items-center gap-2 justify-between">
-                  <span className="font-medium">{player.playerName}</span>
-                  {player.isHost && (
-                    <Badge variant="default" className="text-xs">
-                      <Crown className="h-3 w-3 mr-1" />
-                      Host
-                    </Badge>
-                  )}
+          {sortedPlayers.map((player) => {
+            const pingLatency = pingMap[player.playerId];
+            return (
+              <div
+                key={player.playerId}
+                className="flex items-center gap-3 p-3 rounded-lg bg-muted/50"
+              >
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 justify-between">
+                    <span className="font-medium">{player.playerName}</span>
+                    {player.isHost && (
+                      <Badge variant="default" className="text-xs">
+                        <Crown className="h-3 w-3 mr-1" />
+                        Host
+                      </Badge>
+                    )}
+                  </div>
                 </div>
+                {/* Ping Badge */}
+                <Badge
+                  variant="secondary"
+                  className="text-xs min-w-[40px] text-center"
+                  title="Ping latency in milliseconds"
+                >
+                  {typeof pingLatency === "number" ? (
+                    `${pingLatency} ms`
+                  ) : (
+                    <Loader2 className="animate-spin h-4 w-4 text-muted-foreground" />
+                  )}
+                </Badge>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </CardContent>
       <CardFooter>

@@ -17,7 +17,6 @@ export function Chat() {
   const player = playerStore.player;
   const [chatMessage, setChatMessage] = useState("");
 
-  // Load player once on mount
   useEffect(() => {
     playerStore.loadPlayerStore();
   }, [playerStore]);
@@ -67,6 +66,7 @@ export function Chat() {
         <ScrollArea className="flex-1 overflow-y-auto px-4">
           <div className="space-y-3 py-4" ref={chatScrollRef}>
             {allEvents.map((msg) => {
+              if (msg.event.case === "pingBroadcast") return;
               const isYou =
                 msg.event.value?.player?.playerId ===
                 playerStore.player?.playerId;

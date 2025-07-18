@@ -1,4 +1,9 @@
-import { RoomBroadcast, type PlayerInfo, type RoomEvent } from "@/gen/file_pb";
+import {
+  RoomBroadcast,
+  type PlayerInfo,
+  type RoomEvent,
+  type PingBroadcast,
+} from "@/gen/file_pb";
 import { createConnectTransport } from "@connectrpc/connect-web";
 import { createClient } from "@connectrpc/connect";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -16,8 +21,11 @@ export function useRoomBroadcast(roomId: string | undefined) {
   const eventsRef = useRef<RoomEvent[]>([]);
   const [updateTrigger, setUpdateTrigger] = useState(0); // Trigger re-renders manually
   const chatScrollRef = useRef<HTMLDivElement>(null);
+  const [pingMap, setPingMap] = useState<Record<string, number>>({});
 
-  const { data: listMembersResponse } = useQuery(listMembers, { roomId });
+  const { data: listMembersResponse, refetch } = useQuery(listMembers, {
+    roomId,
+  });
 
   useEffect(() => {
     if (listMembersResponse?.players.length) {
@@ -63,6 +71,23 @@ export function useRoomBroadcast(roomId: string | undefined) {
             setPlayers((prev) =>
               prev.filter((p) => p.playerId !== leftPlayerId)
             );
+            refetch();
+            break;
+          }
+          case "pingBroadcast": {
+            const ping = event.event.value as PingBroadcast;
+            if (ping && ping.playerId && ping.latencyMs != null) {
+              // Convert bigint → number (safe: ping is a few hundred ms at most)
+              const latency =
+                typeof ping.latencyMs === "bigint"
+                  ? Number(ping.latencyMs)
+                  : ping.latencyMs;
+
+              setPingMap((prev) => ({
+                ...prev,
+                [ping.playerId]: latency,
+              }));
+            }
             break;
           }
         }
@@ -77,8 +102,8 @@ export function useRoomBroadcast(roomId: string | undefined) {
   }, [roomId, scrollToBottom]);
 
   const allEvents = useMemo(() => {
-    return [...eventsRef.current]; // Always returns a fresh, stable copy
-  }, [updateTrigger]); // Only recalculates when events actually change
+    return [...eventsRef.current];
+  }, [updateTrigger]);
 
-  return { allEvents, chatScrollRef, players };
+  return { allEvents, chatScrollRef, players, pingMap };
 }
